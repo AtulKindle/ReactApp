@@ -1,6 +1,8 @@
 export default function Login(){
+    const Avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
     return(
         <div className="login-wrapper mt-5 p-5 shadow-lg">
+            <h2><img src= {Avatar} alt="" className="rounded-pill img-fluid"/> Create Your Account</h2>
             <form class="row g-3">
                 <div class="col-12">
                     <label for="exampleFormControlInput1" class="form-label ">Email address</label>
