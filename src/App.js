@@ -1,21 +1,17 @@
 import { React } from "react";
-import Gallery from './components/Gallery.js';
-import './components/Gallery.css';
+import Login from './components/login/Login.js';
+import './components/login/Login.css';
 
 export default function App() {
   return (
-    <div className="front">
+    <div className="">
       <div className="container">
         <div className="row">
-          <div className="col-lg-4">
-            <Gallery/>
+        <div className="col-lg-3"></div>
+          <div className="col-lg-6">
+            <Login/>
           </div>
-          <div className="col-lg-4">
-          <Gallery/>
-          </div>
-          <div className="col-lg-4">
-          <Gallery/>
-          </div>
+        <div className="col-lg-3"></div>
         </div>
       </div>
     </div>
