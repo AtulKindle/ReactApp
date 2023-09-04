@@ -1,9 +1,12 @@
 export default function Gallery(){
     return(
-        <div class="text-center">
-            <h1 class="text-primary">
-                Hello React App 
-            </h1>
+    <div className="card" style={{width: "18rem"}}>
+        <img src="https://i.imgur.com/yXOvdOSs.jpg" class="card-img-top" alt="..."/>
+        <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/" className="btn btn-primary">Go somewhere</a>
         </div>
-    )
+    </div>
+    );
 }
