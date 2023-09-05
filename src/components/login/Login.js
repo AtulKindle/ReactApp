@@ -12,10 +12,10 @@ function formatDate(date) {
   ).format(date);
 }
 export default function Login(){
-    const Avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
+    const Avatar = 'https://loremflickr.com/320/240/dog';
     return(
         <div className="login-wrapper mt-5 p-5 shadow-lg">
-            <h2><img src= {Avatar} alt="" className="rounded-pill img-fluid"/> Create Your Account</h2>
+            <h2><img src= {Avatar} alt="" width={64} className="rounded-pill img-fluid"/> Create Your Account</h2>
             <form class="row g-3">
                 <div className="col-12">
                     <label for="exampleFormControlInput1" class="form-label ">Email address</label>
