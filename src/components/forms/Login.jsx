@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 // import  { useState } from 'react';
 
 
@@ -29,6 +29,17 @@ export default function Login() {
     //   // console.log(result);
     // }
 
+    const [fName,setfName] = useState("");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [allEntry,setAllEntry] = useState([]);
+    const submitForm = (e) => {
+      e.preventDefault()
+
+      const NewEntry = {fName:fName,email:email, password:password}
+      setAllEntry([...allEntry,NewEntry])
+      console.log(allEntry)
+    }
 
   return (
     <div className="container">
@@ -44,7 +55,7 @@ export default function Login() {
         />{" "}
         Create Your Account
       </h2>
-      <form>
+      <form action="" onSubmit={submitForm}>
             <div className="mb-3">
               <label className="form-label ">
                 Full Name
@@ -52,9 +63,10 @@ export default function Login() {
               <input
                 type="text"
                 className="form-control mb-3"
-                id="title"
+              value={fName}
                 placeholder="John Doe"
-                // onChange={e => setData({...data, name: e.target.value})} 
+                autoComplete="off"
+                onChange={(e) => setfName(e.target.value)} 
               />
             </div>
             <div className="mb-3">
@@ -64,8 +76,10 @@ export default function Login() {
               <input
                 type="email"
                 className="form-control mb-3"
-                id="body"
+                value={email}
                 placeholder=""
+                autoComplete="off"
+                onChange={(e) => setEmail(e.target.value)} 
               />
             </div>
             <div className="mb-3">
@@ -76,7 +90,10 @@ export default function Login() {
                 type="password"
                 className="form-control mb-3"
                 id="userId"
-                placeholder="Password"          
+                placeholder="Password"  
+                value={password}    
+                autoComplete="off"  
+                onChange={(e) => setPassword(e.target.value)}   
               />
             </div>
             <div className="mb-3">
@@ -85,6 +102,20 @@ export default function Login() {
               </button>
             </div>
       </form>
+      <div>
+          {
+            allEntry.map((curElem) => {
+                return(
+                  <div className="data">
+                    <p>{curElem.fName}</p>
+                    <p>{curElem.email}</p>
+                    <p>{curElem.password}</p>
+                  </div>
+                )
+            }
+            )
+          }
+      </div>
       </div>
         </div>
      </div>
