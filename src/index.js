@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import './components/login/Login';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import Login from './components/login/Login';
+import Login from './components/forms/Login';
 import Home from './pages/Home';
 // import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
 

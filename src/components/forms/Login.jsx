@@ -1,5 +1,5 @@
 import { React } from "react";
-import  { useState } from 'react';
+// import  { useState } from 'react';
 
 
 export default function Login() {
@@ -8,27 +8,28 @@ export default function Login() {
   // function handleClick(){
     //   setCount(count + 1);
     // }
-    const [data, setData] = useState({});
+    // const [data, setData] = useState({});
+    // const handleSubmit = async (e) => {
+    //   e.preventDefault();
+    //     await fetch('https://jsonplaceholder.typicode.com/posts', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //       title: 'dsd',
+    //       body: 'ds',
+    //       userId: 2,
+    //     }),
+    //     headers: {
+    //       'Content-type': 'application/json; charset=UTF-8',
+    //     },
+    //   })
+    //     .then((response) => response.json())
+    //     .then((json) => console.log(json));
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-        await fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-          title: 'dsd',
-          body: 'ds',
-          userId: 2,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
+    //   // const result = await response.json();
+    //   // console.log(result);
+    // }
 
-      // const result = await response.json();
-      // console.log(result);
-    }
+
   return (
     <div className="container">
      <div className="row">
@@ -43,7 +44,7 @@ export default function Login() {
         />{" "}
         Create Your Account
       </h2>
-      <form onSubmit={handleSubmit} >
+      <form>
             <div className="mb-3">
               <label className="form-label ">
                 Full Name
@@ -53,8 +54,7 @@ export default function Login() {
                 className="form-control mb-3"
                 id="title"
                 placeholder="John Doe"
-                onChange={e => setData({...data, name: e.target.value})} 
-             
+                // onChange={e => setData({...data, name: e.target.value})} 
               />
             </div>
             <div className="mb-3">
@@ -65,7 +65,6 @@ export default function Login() {
                 type="email"
                 className="form-control mb-3"
                 id="body"
-                onChange={e => setData({...data, name: e.target.value})} 
                 placeholder=""
               />
             </div>
@@ -77,9 +76,7 @@ export default function Login() {
                 type="password"
                 className="form-control mb-3"
                 id="userId"
-                placeholder="Password"
-                onChange={e => setData({...data, name: e.target.value})} 
-              
+                placeholder="Password"          
               />
             </div>
             <div className="mb-3">
