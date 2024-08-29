@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Navbar from "../components/navbar/Navbar"
 const main = () => {
   return (
     <>
-        <div className=''>
-            welcome
-        </div>
+        <header className='bg-cyan-50'>
+          <Navbar/>
+        </header>
     </>
   )
 }
